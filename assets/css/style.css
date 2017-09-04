@@ -7,10 +7,7 @@ html {
   font-family: "Open Sans", "Helvetica", sans-serif;
   color: #555;
 }
-body {
-  width: 100%;
-  margin: 0;
-}
+
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -76,7 +73,6 @@ header img {
 nav {
   display: flex;
   color: #555;
-  margin-right: 42px;
   padding: 15px 24px;
 }
 nav span {
@@ -110,6 +106,9 @@ nav a:visited {
   background-color: #ddd;
   display: flex;
   align-items: center;
+  width: 100%;
+  margin: 32px 0 0;
+  padding-top: 32px;
 }
 .banner-side {
   display: flex;
@@ -138,14 +137,17 @@ nav a:visited {
 /* main section */
 
 main {
-  display: flex;
   margin: 3px 0;
-  width: 100%;
+}
+main .container {
+  display: flex;
+  max-width: 100%;
+  margin: 0 24px 0 24px;
 }
 .col-1 {
   display: flex;
   width: 60%;
-  padding: 32px 24px;
+  padding: 32px 2% 32px 0;
   flex-direction: column;
   border-right: 1px solid #ddd;
 }
@@ -161,7 +163,7 @@ main {
 }
 .flex {
   display: flex;
-  width: 100%;
+  width: 98%;
   padding: 16px;
   border-bottom: 1px solid #ddd;
 }
@@ -182,6 +184,71 @@ main {
   width: 65%;
   margin: 0 20px;
 }
-.box-3 {
+.box-3, .thesis .box-1 {
   background-color: #ddd;
+}
+
+#learning {
+  background-color: #eee;
+  text-align: center;
+}
+#learning h3 {
+  padding-bottom: 32px;
+}
+.learn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 72px;
+  padding: 0 0 32px;
+  text-align: left;
+}
+.boxed {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 32px;
+  width: 30%;
+}
+.learn img {
+  height: auto;
+  width: 100%;
+}
+.learn h4 {
+  padding: 16px 0 8px 16px;
+}
+.course {
+  text-transform: uppercase;
+  padding: 0 0 8px 16px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.info {
+  padding: 0 0 24px 16px;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.thesis .col-1, .thesis .flex {
+  border: none;
+}
+video {
+  width: 100%;
+}
+
+/* footer section */
+
+footer {
+  border-top: 2px solid #eee;
+  margin: 0 5px 0;
+  height: 100px;
+  padding: 16px 0 0;
+}
+.flex-foot {
+  margin: 0 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  padding: 0 10px;
 }
