@@ -92,14 +92,6 @@ nav a:visited {
 .mobile {
   display: none;
 }
-@media screen and (max-width: 768px) {
-  .mobile {
-    display: initial;
-  }
-  .menu {
-    display: none
-  }
-}
 
 #banner {
   margin-top: 64px;
@@ -121,17 +113,78 @@ nav a:visited {
   height: auto;
   padding: 32px 24px;
 }
-#banner .box {
+#banner .button {
   background-color: #555;
   color: white;
   padding: 16px 0;
   text-align: center;
-  width: 70%;
+  width: 20%;
   font-size: 1.25rem;
+  border-radius: 5px;
 }
 #banner p {
   padding: 20px 0 30px;
   font-size: 1.75rem;
+}
+@media screen and (min-width: 769px) {
+  #banner .button {
+    position: absolute;
+    transition: all 1s;
+  }
+  #banner .button:hover {
+    font-size: 1.35rem;
+    width: 25%;
+    padding: 20px 0;
+    background-color: #5595E0;
+    color: #555;    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .mobile span {
+    padding: 0 8.5% 2%;
+  }
+  .menu {
+    display: none
+  }
+  #banner {
+    flex-flow: column wrap;
+    margin: 0 auto;
+    padding: 0;
+    align-items: flex-start;
+  }
+  #banner img {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .banner-side {
+    width: 95%;
+    margin: 0 0 0 16px;
+    flex-flow: column wrap;
+    padding-bottom: 32px;
+  }
+  #banner h1 {
+    padding: 32px 16px;
+  }
+  #banner p {
+    padding: 0 16px 24px;
+  }
+  #banner .button {
+    position: static;
+    width: 95%;
+    margin: 0 auto;
+    background-color: #999;
+  }
+
+  #banner .button:hover {
+    background-color: #333;
+  }
 }
 
 /* main section */
@@ -236,6 +289,67 @@ video {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  main .container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .practice .flex {
+    flex-direction: column;
+    border: none;
+  }
+  .practice .col-1 {
+    display: none;
+  }
+  .practice .col-2 {
+    width: 90%;
+    margin: 65px 16px;
+  }
+  .practice .inside {
+    margin: 16px 16px 0;
+  }
+  .orientation, .campus, .guest {
+    width: auto;
+  }
+  .practice .box-3 {
+    background-color: #fff;
+  }
+  #learning {
+    background-color: white;    
+    border: 1px solid #ddd;
+  }
+  #learning img, #learning p {
+    display: none;
+  }
+  .learn {
+    flex-direction: column;
+    margin: 0 32px;
+  }
+  .boxed {
+    background-color: #ddd;
+    width: 100%;
+    margin: 0 auto 8px;
+  }
+  .boxed h4 {
+    width: 90%;
+    padding: 24px 0 24px 16px;
+  }
+  .thesis .col-1 h4, .thesis .col-1 blockquote, .thesis .col-2 {
+    display: none;
+  }
+  .thesis {
+    margin: 0 auto;
+  }
+  .thesis .col-1 {
+    width: 100%;
+    padding: 0;
+  }
+  .thesis h3 {
+    text-align: center;
+  }
+
+
+}
 /* footer section */
 
 footer {
@@ -251,4 +365,13 @@ footer {
 }
 .links a {
   padding: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    height: 50px;
+    padding: 60px 0 0;
+  }
+  .links {
+    display: none;
+  }
 }
