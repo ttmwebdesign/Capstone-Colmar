@@ -148,6 +148,13 @@ nav a:visited {
   header img {
     height: 60px;
   }
+  .icon a {
+    color: black;
+    margin-left: -15px;
+  }
+  .icon a i {
+    padding-top: 10px;
+  }
   #logo {
     display: none;
   }
@@ -174,7 +181,6 @@ nav a:visited {
   }
   .banner-side {
     width: 95%;
-    margin: 0 0 0 16px;
     flex-flow: column wrap;
     padding-bottom: 32px;
   }
@@ -189,7 +195,7 @@ nav a:visited {
   }
   #banner .button {
     position: static;
-    width: 92%;
+    width: 90%;
     margin: 0 auto;
     background-color: #999;
   }

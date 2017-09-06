@@ -30,3 +30,6 @@ dwsync.xml
 *.codekit3
 
 # just for this project
+colmar-academy-spec.png
+/img
+/img/*
