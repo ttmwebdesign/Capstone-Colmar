@@ -126,7 +126,7 @@ nav a:visited {
   padding: 20px 0 30px;
   font-size: 1.75rem;
 }
-@media screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   #banner .button {
     position: absolute;
     transition: all 1s;
@@ -140,7 +140,14 @@ nav a:visited {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  header {
+    height: 77px;
+    margin-top: -10px;
+  }
+  header img {
+    height: 60px;
+  }
   #logo {
     display: none;
   }
@@ -294,7 +301,7 @@ video {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   main .container {
     flex-direction: column;
     margin: 0;
@@ -371,7 +378,7 @@ footer {
 .links a {
   padding: 0 10px;
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   footer {
     height: 50px;
     padding: 60px 0 0;
