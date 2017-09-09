@@ -179,7 +179,6 @@ nav a:visited {
     padding: 0;
     align-items: flex-start;
   }
-
   #banner picture {
     width: 100%;
   }
@@ -203,11 +202,13 @@ nav a:visited {
   }
   #banner button {
     position: static;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    /* margin: 0 auto; */
     background-color: #999;
   }
-
+  .button {
+    margin: 0 32px;
+  }
   #banner button:hover {
     background-color: #333;
   }
@@ -276,6 +277,9 @@ main .container {
 .box-3, .thesis .box-1 {
   background-color: #ddd;
 }
+.practice .box:nth-child(3), .thesis .box:nth-child(1) {
+  background-color: #ddd;
+}
 
 #learning {
   background-color: #eee;
@@ -338,7 +342,7 @@ video {
     width: 85%;
     margin: 0 auto;
   }
-  .thesis .box-1, .thesis .box-2 {
+  .thesis .box, .thesis .box:nth-child(1) {
     width: 75%;
     background-color: #fff;
   }
@@ -359,7 +363,7 @@ video {
   .practice .inside {
     margin: 16px 20px 0;
   }
-  .practice .box-3 {
+  .practice .box:nth-child(3) {
     background-color: #fff;
   }
 }
