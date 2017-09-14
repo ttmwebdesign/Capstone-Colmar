@@ -1,0 +1,318 @@
+
+html {
+  width: 100%;
+  height: 100%;
+/*  perspective: 900; */
+  overflow-y: scroll;
+  background-color: #dce7eb;
+  font-family: "Titillium Web", sans-serif;
+  color: rgba(48, 69, 92, 0.8);
+}
+
+body {
+  min-height: 0;
+  background-color: #fefffa;
+/*  display: inline-block;
+  position: relative;
+  left: 50%; 
+  margin: 90px 0;
+  transform: translate(-50%, 0); */
+
+}
+@media (max-width: 550px) {
+  body {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+}
+h1, h2 {
+  color: #ff6873;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  /* background-color: #fefffa; */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* header, nav  */
+.svg-image {
+  height: 40px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: fixed;
+  background-color: #fefffa;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 10px 0 0 #ff6873 inset;
+  margin-top: 0;
+
+  /* max-width: 450px; */
+  
+}
+nav, nav ul, #logo {
+  display: flex;
+}
+nav ul li {
+  padding: 0 8px;
+}
+nav ul li:last-child {
+  padding-right: 16px;
+}
+
+.mobile {
+  display: none;
+}
+
+/*  Accordion CSS */
+
+.accordion {
+  /* 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  */
+  margin: 0 auto;
+  width: 75%;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  /* Radio Inputs */
+  /* Labels */
+  /* Panel Content */
+}
+.accordion input[name='panel'] {
+  display: none;
+}
+.accordion label {
+  position: relative;
+  display: block;
+  padding: 1em;
+  /*background: linear-gradient(to bottom, #fefefe 0%, #d1d1d1 50%, #dbdbdb 55%, #e2e2e2 100%); */
+  border-top: 1px solid #ff6873;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 0 #ff6873;
+  font-size: 1.5em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #666;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+.accordion label:after {
+  content: '+';
+  line-height: .9em;
+  position: absolute;
+  right: 1em;
+  width: 1em;
+  height: 1em;
+  color: #eee;
+  text-align: center;
+  border-radius: 50%;
+  background: #ff6873;
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.5), 0 1px 0 #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+}
+.accordion label:hover {
+  color: #ff6873;
+}
+.accordion input:checked + label {
+  color: #ff6873;
+}
+.accordion input:checked + label:after {
+  content: '-';
+  /* adjsut line-height to vertically center icon */
+  line-height: 1em; 
+}
+.accordion .accordion__content {
+  overflow: hidden;
+  max-height: 0em;
+  position: relative;
+  padding: 0 1.5em;
+  box-shadow: inset 4px 0 0 0 #ff6873, inset 0 3px 6px rgba(0, 0, 0, 0.75);
+  background: #444;
+  background: linear-gradient(to bottom, #444444 0%, #222222 100%);
+  color: #eee;
+  transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+.accordion .accordion__content:not(:last-of-type) {
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.25), inset 4px 0 0 0 #ff6873, inset 0 3px 6px rgba(0, 0, 0, 0.75);
+}
+.accordion .accordion__content .accordion__header {
+  padding: 1em 0;
+}
+.accordion .accordion__content .accordion__body {
+  font-size: .825em;
+  line-height: 1.4em;
+  padding: 0 0 1.5em;
+}
+
+input[name='panel']:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+picture, img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Text over image CSS */
+.textOverImage p {
+  color: #333;
+}
+.testing {
+  margin: 0 auto;
+}
+.textOverImage{
+    width:100%;
+    /* max-width: 600px;
+    height:400px; */
+    display:inline-block;
+    background-size:cover;
+    border-radius:4px;
+    margin: 4px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+  }
+  
+  .textOverImage > input{
+    display:none;
+  }
+  
+  .textOverImage > div,.textOverImage > h2{
+    position:absolute;
+    background: #444;
+    
+    background-color:rgba(255,255,255,0.8); 
+    bottom:20px;
+    left:4px;
+    right:4px;
+    border-radius:4px;
+    padding:8px;
+    overflow:hidden;
+    opacity:0;
+    transition:850ms;
+    margin: 0 4px;
+  }
+  /* .textOverImage:hover > h2, */.textOverImage > input:checked + h2 + div{
+    bottom:4px;
+    opacity:1;
+  }
+  
+  .textOverImage > input:checked + h2{
+    bottom:-20px;
+    opacity:0;
+  }
+  
+  .textOverImage > h2{
+    margin: 0 4px;
+    opacity: 1;
+    bottom: 4px;
+    font-weight: 500;
+  }
+  .subContainer {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    justify-content: space-around;
+  }
+  .infoMain {
+    background:url(../images/information-main.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    margin-top:64px;
+  }
+  .infoOrientation {
+    background: url(../images/information-orientation-mobile.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+  }
+  .infoCampus {
+    background: url(../images/information-campus-mobile.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+  }
+  .infoLecture {
+    background: url(../images/information-guest-lecture-mobile.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+  }
+@media only screen and (max-width: 959px) {
+  .menu, header h2 {
+    display: none;
+  }
+  .mobile {
+    display: initial;
+  }
+  .svg-image {
+    height: 56px;
+  }
+  nav, nav ul {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 75%;
+    justify-content: space-between;
+  }
+  nav ul li, #logo {
+    padding-top: 12px;
+  }
+  #logo {
+    flex-basis: 25%;
+    padding-left: 16px;
+  }
+  .svg-hov {
+    fill: #0B1D35;
+    transition: fill 450ms ease; 
+  }
+  .svg-hov:hover, .svg-hov:target {
+    fill: #ff6873;
+  }
+}
+  @media only screen and (max-width: 768px) {
+  .infoMain, .infoOrientation, .infoCampus, .infoLecture {
+    height: 200px;
+  }
+  .textOverImage h2 {
+    font-size: 1.5rem;
+  }
+  .subContainer {
+    flex-wrap: wrap;
+  }
+  .accordion {
+    width: 100%;
+  }
+}

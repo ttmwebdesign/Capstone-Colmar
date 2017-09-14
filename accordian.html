@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Colmar Academy</title>
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/alt.css">
+  <link rel="stylesheet" href="./assets/css/accordian.css">
 </head>
 <body>
-
 <!-- begin Header - inc Nav & Banner  -->
   <header>
 <!-- begin Nav -->
@@ -151,204 +150,105 @@
 
 
   </header>
+
 <!-- end Header -->
-<!-- begin Banner -->
-  <section role="banner">
-    <div id="banner">
-      <picture class="col-1">
-        <source media="(min-width: 769px)" srcset="./assets/images/banner.jpg">
-        <source media="(max-width: 768px)" srcset="./assets/images/banner-mobile.jpg">
-        <img src="./assets/images/banner.jpg" alt="banner">
+  <div class="container">
+    <label class="textOverImage infoMain">
+      <input type="checkbox">
+      <h2>It doesn't hurt to keep practicing</h2>
+      <div>
+        <p>"Maecenas nec tortor convallis, pharetra leo eu, vulputate erat. Mauris dapibus justo non nisi finibus, non tincidunt turpis convallis. Nunc sed sapien orci. Nulla sed ullamcorper ligula. Praesent ut ante sit amet eros convallis scelerisque. Nullam dignissim ipsum sem, sit amet gravida urna scelerisque vel. Vestibulum maximus aliquet vulputate. Sed id sagittis tellus, in dictum purus. Donec convallis et est."</p>
+      </div>
+    </label>
+  </div>
+
+  <div class="container">
+   <div class="subContainer">
+    <label class="textOverImage infoOrientation">
+      <input type="checkbox">
+      <h2>Orientation Date</h2>
+      <div><p>Tue 10/11 &amp; Wed 10/12: 8am-3pm <br/><a href="#">Read more...</a></p></div>
+    </label>
+    <label class="textOverImage infoCampus">
+      <input type="checkbox">
+      <h2>Our Campus</h2>
+      <div><p>Find which campus is close by you <br/><a href="#">Read more...</a></p></div>
+    </label>    
+    <label class="textOverImage infoLecture">
+      <input type="checkbox">
+      <h2>Our guest lecture</h2>
+      <div><p>Join a keynote with Oliver Sack about music in medical treatment <br/><a href="#">Read more...</a></p></div>
+    </label>
+    </div>
+  </div>
+
+
+  <div class="container">
+  <div class="accordion">
+
+  <!-- Panel 1 -->
+  <div>
+    <input type="checkbox" name="panel" id="panel-1">
+    <label for="panel-1">Software Engineering</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">Web Development, Mobile Development, iOT, APIs</p>
+    </div>
+  </div>
+
+  <!-- Panel 2 -->
+  <div>
+    <input type="checkbox" name="panel" id="panel-2">
+    <label for="panel-2">Computer Art</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
+      <picture class="accordian__body">
+          <source srcset="./assets/images/course-business.jpg">
+          <img src="./assets/images/course-business.jpg" alt="">
       </picture>
-      <div class="col-2">
-        <h1>Learn something new everyday</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#"><button type="button">Start here</button></a>
-      </div>
+      
     </div>
-  </section>
-<!-- end Banner --> 
+  </div>
 
-<!-- begin Main -->
-  <main>
-    <section id="campus">
-      <div class="col-1">
-        <div class="box">
-          <picture>
-            <source media="(min-width: 769px)" srcset="./assets/images/information-main.jpg">
-            <img src="./assets/images/information-main.jpg" alt="Man reading a book">
-          </picture>
-          <div class="info">
-            <h3>It doesn't hurt to keep practicing</h3>
-            <blockquote>
-              "Maecenas nec tortor convallis, pharetra leo eu, vulputate erat. Mauris dapibus justo non nisi finibus, non tincidunt turpis convallis. Nunc sed sapien orci. Nulla sed ullamcorper ligula. Praesent ut ante sit amet eros convallis scelerisque. Nullam dignissim ipsum sem, sit amet gravida urna scelerisque vel. Vestibulum maximus aliquet vulputate. Sed id sagittis tellus, in dictum purus. Donec convallis et est."
-            </blockquote>
-            <p class="quote-author">Emanuel, Sr Strategist at Hiring.com</p>
-          </div>
-        </div>
-      </div><!-- end col-1 -->
-      <div class="col-2">
-        <div class="row flex">
-          <div class="box">
-            <picture class="image">
-              <source media="(min-width: 960px)" srcset="./assets/images/information-orientation.jpg">
-              <source media="(max-width: 959px)" srcset="./assets/images/information-orientation-mobile.jpg">
-              <img src="./assets/images/information-orientation.jpg"" alt="Overhead view of walking students">
-            </picture>
-            <div class="info">
-              <h4>Orientation date</h4>
-              <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
-              <a href="#modal-one" class="pop">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="box">
-            <picture class="image">
-              <source media="(min-width: 960px)" srcset="./assets/images/information-campus.jpg">
-              <source media="(max-width: 959px)" srcset="./assets/images/information-campus-mobile.jpg">
-              <img src="./assets/images/information-campus.jpg"" alt="A view of an inviting classroom">
-            </picture>
-            <div class="info">
-              <h4>Our Campus</h4>
-              <p>Find which campus is close by you</p>
-              <a href="#modal-two" class="pop">Read more</a>
-            </div>
-          </div>
-        </div>
-        <div class="row flex">
-          <div class="box">
-            <picture class="image">
-              <source media="(min-width: 960px)" srcset="./assets/images/information-guest-lecture.jpg">
-              <source media="(max-width: 959px)" srcset="./assets/images/information-guest-lecture-mobile.jpg">
-              <img src="./assets/images/information-guest-lecture.jpg"" alt="A view of an inviting classroom" class="ornery-img">
-            </picture>
-            <div class="info">
-              <h4>Our guest lecture</h4>
-
-              <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-              <a href="#modal-two" class="pop">Read more</a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- end col-2 -->
-    </section><!-- end #campus -->
-
-<!-- Modal content -->
-
-
-   <div class="modal" id="modal-one" aria-hidden="true">
-      <div class="modal-box">
-        <div class="modal-body">
-          <p>Vestibulum ultricies augue nec dolor pulvinar faucibus. Aliquam malesuada pharetra fringilla. Vivamus eu purus ac turpis hendrerit venenatis vel dignissim nisi. Quisque id molestie purus, ac fringilla mi. Curabitur sed nunc purus. Sed iaculis mi nec metus maximus varius. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora.</p>
-          <a href="#" class="btn-close" aria-hidden="true">Close</a>
-        </div>
-      </div>
+  <!-- Panel 3 -->
+  <div>
+    <input type="checkbox" name="panel" id="panel-3">
+    <label for="panel-3">Design</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">User Experience Design, User Research, Visual Design</p>
     </div>
-    <div class="modal" id="modal-two" aria-hidden="true">
-      <div class="modal-box">
-        <div class="modal-body">
-          <p>Praesent et odio ut ante auctor lobortis vel pretium massa. Phasellus tristique faucibus nunc, non vulputate neque porta non. Ut eu metus a nisi vehicula lobortis placerat eu sapien. Ut imperdiet neque ornare est molestie, quis venenatis lorem pharetra. Nullam auctor neque at accumsan dignissim. Sed nulla enim, placerat eget.</p>
-          <a href="#" class="btn-close" aria-hidden="true">Close</a>
-        </div>
-      </div>
+  </div>
+
+  <!-- Panel 4 -->
+  <div>
+    <input type="checkbox" name="panel" id="panel-4">
+    <label for="panel-4">Data</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">Data Science, Big Data, SQL, Data Visualization</p>
     </div>
-    <div class="modal" id="modal-three" aria-hidden="true">
-      <div class="modal-box">
-        <div class="modal-body">
-          <p>Donec cursus sodales ultrices. Suspendisse potenti. Quisque malesuada elit risus, eu tempus nunc egestas vel. Vivamus hendrerit in nunc non gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-          <a href="#" class="btn-close" aria-hidden="true">Close</a>
-        </div>
-      </div>
+  </div>
+  <div>
+    <input type="checkbox" name="panel" id="panel-5">
+    <label for="panel-5">Business</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">Product Development, Business Development, Startup</p>
     </div>
+  </div>
+    <div>
+    <input type="checkbox" name="panel" id="panel-6">
+    <label for="panel-6">Marketing</label>
+    <div class="accordion__content">
+      <h2 class="accordion__header">Courses</h2>
+      <p class="accordion__body">Analytics, Content Marketing, Mobile Marketing</p>
+    </div>
+  </div>
 
-<!-- end modal -->
+</div><!-- .accordion -->
 
-    <section id="learn">
-      <div class="col-1">
-        <h3>Start Learning</h3>
-      </div><!-- end col-1 -->
-      <div class="col-2">
-        <div class="row flex">
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Software engineering</h4>
-              <p class="course">Courses</p>
-              <p>Web Development, Mobile Development, iOT, APIs</p>
-            </div>
-          </div>
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Computer art</h4>
-              <p class="course">Courses</p>
-              <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
-            </div>          
-          </div>
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Design</h4>
-              <p class="course">Courses</p>
-              <p>User Experience Design, User Research, Visual Design</p>
-            </div>
-          </div>
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Data</h4>
-              <p class="course">Courses</p>
-              <p>Data Science, Big Data, SQL, Data Visualization</p>
-            </div>
-          </div>
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Business</h4>
-              <p class="course">Courses</p>
-              <p>Product Development, Business Development, Startup</p>
-            </div>
-          </div>
-          <div class="box">
-            <picture class="image">
-              
-            </picture>
-            <div class="info">
-              <h4>Marketing</h4>
-              <p class="course">Courses</p>
-              <p>Analytics, Content Marketing, Mobile Marketing</p>
-            </div>
-          </div>
-        </div>
-      </div><!-- end col-2 -->
-    </section><!-- end #learn -->
-  </main>
-<!-- end Main -->
-
-<!-- begin Footer -->
-  <footer>
-    <section class="flex-foot">
-      <div class="copy">&copy; 2016 Colmar Academy. All rights reserved</div>
-      <div class="links" role="presentation">
-        <span><a href="#">Terms</a></span> 
-        <span><a href="#">Privacy</a></span>
-      </div>
-    </section>
-  </footer>
-
-<!-- end Footer -->
-
+</div>
 </body>
 </html>

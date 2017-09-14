@@ -7,7 +7,6 @@ html {
   font-size: 16px;
   font-family: "Open Sans", "Helvetica", sans-serif;
   color: #101F36;
-  background-color:#dce7eb;
 }
 
 h1 {
@@ -53,105 +52,6 @@ a:visited {
   color: #294972;
 }
 
-/* header, nav  */
-.svg-image {
-  height: 40px;
-}
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  position: fixed;
-  background-color: #fefffa;
-  width: 100%;
-}
-nav, nav ul, #logo {
-  display: flex;
-}
-nav ul li {
-  padding: 0 8px;
-}
-nav ul li:last-child {
-  padding-right: 16px;
-}
-
-.mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 959px) {
-  .menu, h2 {
-    display: none;
-  }
-  .mobile {
-    display: initial;
-  }
-  .svg-image {
-    height: 56px;
-  }
-  nav, nav ul {
-    width: 100%;
-    flex-grow: 1;
-    flex-basis: 75%;
-    justify-content: space-between;
-  }
-  nav ul li, #logo {
-    padding-top: 12px;
-  }
-  #logo {
-    flex-basis: 25%;
-    padding-left: 16px;
-  }
-  .svg-hov {
-    fill: #0B1D35;
-    transition: fill 550ms ease; 
-  }
-  .svg-hov:hover {
-    fill: #5595E0;
-  }
-}
-/* banner - desktop */
-
-#banner {
-  padding: 64px 0 0;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  background: #fefffa;
-} 
-#banner img, #campus img  {
-  width: 100%;
-  height: auto;
-}
-#banner .col-1 {
-  flex-basis: 60%;
-  padding: 32px 24px 32px 24px;
-}
-#banner .col-2 {
-  flex-basis: 40%;
-}
-button {
-  padding: 8px 0;
-  width: 80%;
-  margin: 16px 24px 0;
-  background: #294972;
-  border: none;
-  border-radius: 5px;
-  color: #eee;
-  font-size: 1.15rem;
-  font-weight: 300;
-  transition: background 550ms ease;
-}
-button:hover {
-  background: #101F36;
-  cursor: pointer;
-}
-button:active {
-  border: none;
-  box-shadow: none;
-}
-
 /* Main section - desktop */
 
 p {
@@ -172,7 +72,6 @@ blockquote::first-letter {
 #campus {
   display: flex;
   width: 100%;
-  background-color: #fefffa;
 }
 #campus .col-1 {
   flex-basis: 60%;
@@ -210,21 +109,9 @@ blockquote::first-letter {
   flex-basis: 65%;
   padding: 0 0 0 16px;
 }
-#campus .col-2 .box {
-  display: flex;
-}
-.ornery-img {
-  /* Created because the third image is being pesky
-  and sizing up when extra text is added to the paragraph.
-  This should be added to all of these sidebar images if there
-  is more than a few words of text. */
-  max-width: 174px;
-  max-height: 174px;
-}
+
 
 /* MODAL */
-/* shamelessly borrowed from https://codepen.io/LFeh/pen/oEula */
-
 .pop {
   background: #428bca;
   border: #357ebd solid 1px;
@@ -245,7 +132,7 @@ blockquote::first-letter {
 .btn-close {
   color: #aaa;
   font-size: 1.3rem;
-  padding: 8px;
+  padding: 5px;
   text-decoration: none;
   position: absolute;
   right: 5px;
@@ -275,15 +162,13 @@ blockquote::first-letter {
   top: 20%;
   left: 30%;
 }
-/* positioning for phones because they really don't like the desktop version */
-
 @media only screen and (max-width: 600px) {
   .modal:target .modal-box {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     top: 20%;
-    left: 55%;
+    left: 45%;
   }
 }
 .modal-box {
@@ -308,65 +193,9 @@ blockquote::first-letter {
   padding: 20px;
 }
 
-/* learn section */
-#learn {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #D2E2EF;
-}
-#learn .col-1 {
-  display: flex;
-  justify-content: center;
-}
-#learn .col-2 {
-  display: flex;
-  /* flex-flow: row wrap; */
-}
-#learn .col-2 .flex {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 0 72px 32px;
-}
-#learn .col-2 .box {
-  background: #fff;
-  width: 30%;
-  margin: 8px;
-}
-#learn .col-2 .info {
-  padding: 16px;
-}
-#learn .col-2 .course {
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-
-
 /* mobile or tablet for banner and main sections */
 
 @media only screen and (max-width: 959px) {
-  #banner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 64px 0 0;
-  }
-  #banner img {
-    padding: 0;
-    width: 100%;
-  }
-  #banner .col-1 {
-    padding: 0;
-  }
-  #banner .col-2 {
-    margin: 32px auto;
-    padding: 0 16px;
-  }
-  button {
-    width: 100%;
-    margin: 24px 0 0;
-  }
   #campus {
     flex-direction: column;
   }
@@ -400,13 +229,6 @@ blockquote::first-letter {
   }
   #campus .col-2 {
     width: 100%;
-  }
-  #campus .col-2 .box {
-    flex-direction: column;
-  }
-  .ornery-img {
-    max-width: 100%;
-    max-height: 100%;
   }
 }
 
