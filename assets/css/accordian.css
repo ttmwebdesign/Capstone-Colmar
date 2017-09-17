@@ -1,11 +1,12 @@
 
 html {
-  width: 100%;
+/*   width: 100%;
   height: 100%;
-/*  perspective: 900; */
+  perspective: 900; 
   overflow-y: scroll;
-  background-color: #dce7eb;
+  background-color: #dce7eb;*/
   font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
   color: rgba(48, 69, 92, 0.8);
 }
 
@@ -29,10 +30,23 @@ body {
     left: 0;
   }
 }
+.topContainer {
+  width: 100%;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
+}
+.subContainer {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+  justify-content: space-around;
+}
+.flex {
+  display: flex;
+  justify-content: center;
 }
 h1, h2 {
   color: #ff6873;
@@ -40,10 +54,10 @@ h1, h2 {
 
 h1 {
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 2rem;
   line-height: 42px;
   letter-spacing: 3px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 h2 {
@@ -54,7 +68,19 @@ h2 {
   display: block;
   /* background-color: #fefffa; */
   margin: 0;
-  cursor: pointer;
+}
+.h2-alt {
+  color: #101F36;
+}
+a {
+  text-decoration: none;
+  color: #5595E0;
+}
+a:hover {
+  color: #ff6873;
+}
+a:visited {
+  color: #294972;
 }
 
 /* header, nav  */
@@ -80,16 +106,72 @@ nav, nav ul, #logo {
   display: flex;
 }
 nav ul li {
-  padding: 0 8px;
+  padding: 10px 8px 0;
 }
 nav ul li:last-child {
   padding-right: 16px;
 }
-
+#logo {
+  padding-top: 16px;
+}
 .mobile {
   display: none;
 }
 
+/* banner */
+#banner {
+  padding: 64px 0 0;
+  width: 100%;
+/*
+  display: flex;
+  align-items: center; */
+  background: #fefffa;
+} 
+#banner img, #campus img  {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+}
+.desktopImg {
+  background: url(../images/banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+.desktopImg__inside {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(254, 255, 250, .7);
+  padding: 16px;
+  transform: translate(4%, -20%)
+}
+.mobileImg {
+  display: none;
+}
+button {
+  padding: 8px;
+  width: 80%;
+  margin: 16px auto 0;
+  background: #294972;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  font-size: 1.15rem;
+  font-weight: 300;
+  transition: background 550ms ease;
+  letter-spacing: .125rem;
+}
+button:hover {
+  background: #101F36;
+  cursor: pointer;
+}
+button:active {
+  border: none;
+  box-shadow: none;
+}
 /*  Accordion CSS */
 
 .accordion {
@@ -175,10 +257,14 @@ input[name='panel']:checked ~ .accordion__content {
   /* Get this as close to what height you expect */
   max-height: 50em;
 }
-picture, img {
+#campus picture, #campus img
+#classes picture, #classes img {
     height: auto;
     width: 100%;
     max-width: 400px;
+}
+.accordion img {
+  padding-bottom: 16px;
 }
 
 /* Text over image CSS */
@@ -207,8 +293,7 @@ picture, img {
   
   .textOverImage > div,.textOverImage > h2{
     position:absolute;
-    background: #444;
-    
+    background: #444; /* fallback */    
     background-color:rgba(255,255,255,0.8); 
     bottom:20px;
     left:4px;
@@ -236,12 +321,8 @@ picture, img {
     bottom: 4px;
     font-weight: 500;
   }
-  .subContainer {
-    display: flex;
-    width: 100%;
-    margin: 20px 0;
-    justify-content: space-around;
-  }
+
+  /* These images will be for desktop only */
   .infoMain {
     background:url(../images/information-main.jpg) no-repeat;
     background-size: cover;
@@ -271,6 +352,29 @@ picture, img {
     height: 150px;
     width: 100%;
   }
+  .tabletMobile {
+    display: none;
+  }
+/* footer section */
+
+footer {
+  border-top: 2px solid #eee;
+  margin: 24px 5px 0;
+  height: 75px;
+  padding: 50px 0 0;
+}
+.flex-foot {
+  margin: 0 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  padding: 0 10px;
+}
+
+
+/* Media Queries */
+
 @media only screen and (max-width: 959px) {
   .menu, header h2 {
     display: none;
@@ -288,7 +392,7 @@ picture, img {
     justify-content: space-between;
   }
   nav ul li, #logo {
-    padding-top: 12px;
+    padding-top: 20px;
   }
   #logo {
     flex-basis: 25%;
@@ -301,18 +405,119 @@ picture, img {
   .svg-hov:hover, .svg-hov:target {
     fill: #ff6873;
   }
-}
-  @media only screen and (max-width: 768px) {
-  .infoMain, .infoOrientation, .infoCampus, .infoLecture {
-    height: 200px;
+  .desktopImg {
+    height: 400px;
   }
-  .textOverImage h2 {
-    font-size: 1.5rem;
+  .desktopImg__inside {
+    transform: translate(0%, 0%);
+    width: 100%;
+    padding: 0;
+  }
+  .desktopImg__inside a {
+    text-decoration: none;
+  }
+  #banner h1 {
+    font-size: 1.7rem;
+    padding: 8px 0 0 16px;
+  }
+  #banner p {
+    padding: 0 0 0 16px;;
+  }
+  button {
+    margin: 24px auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .textOverImage {
+    display: none;
+  }
+  .tabletMobile {
+    display: initial;
+  }
+  .tabletMobile img {
+    border-top: 6px #ff6873 solid;
   }
   .subContainer {
     flex-wrap: wrap;
+    width: 86%;
+    margin: 0 auto;
+  }
+  .subContainer div:nth-child(4) {
+    margin-top: 25px;
+  }
+  .subContainer h2 {
+    margin: 12px 8px 0;
+  }
+  .subContainer p, .subContainer a {
+    margin: 6px 16px 8px;
+    padding: 8px 0;
   }
   .accordion {
-    width: 100%;
+    margin: 20px auto;
+  }
+  .infoBox {
+    border-left:6px #ff6873 solid;
+    border-right:6px #ff6873 solid;
+    border-bottom:6px #ff6873 solid;
+    padding-bottom: 12px;
+  }
+  footer {
+    height: 50px;
+    padding: 30px 0 0;
+  }
+  .links {
+    display: none;
   }
 }
+@media only screen and (max-width: 560px) {
+  .subContainer {
+    width: 85%;
+  }
+  .infoMain {
+    max-height: 320px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .subContainer h2 {
+    color: #fefffa;
+    background-color: #ff6873;
+    padding: 8px;
+    margin: 0;
+  }
+  .subContainer, .accordion {
+    width: 100%;
+  }
+  .infoMain {
+    max-height: 220px
+  }
+  .infoBox {
+    border-left: none;
+    border-right: none;
+  }
+  .tabletLecture .infoBox {
+    border-bottom: none;
+  }
+  .desktopImg {
+    height: 375px;
+  }
+  .desktopImg__inside {
+    text-align: center;
+  }
+  button {
+    margin: 12px auto 4px;
+  }
+  #banner h1 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  footer {
+    border-top: none;
+    margin: 0 4px 0;
+    height: 40px;
+    padding: 8px 0 0;
+  }
+  .copy {
+    font-size: .9rem;
+  }
+}
+
