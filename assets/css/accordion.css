@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
 /* ----- common elements ----- */
 
 html {
@@ -33,6 +33,19 @@ h2 {
 .h2-alt {
   color: #101F36;
 }
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 32px auto;
+}
+#classes h3 {
+  padding-left: 1em;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0 16px 16px;
+}
 a {
   text-decoration: none;
   color: #5595E0;
@@ -56,6 +69,13 @@ a:visited {
   width: 100%;
   margin: 20px 0;
   justify-content: space-around;
+}
+.subOne {
+  width: 58%;
+  padding: 0;
+}
+.subTwo {
+  width: 38%;
 }
 .flex {
   display: flex;
@@ -174,7 +194,7 @@ button:active {
 }
 .accordion label:after {
   content: '+';
-  line-height: .9em;
+  line-height: .8em;
   position: absolute;
   right: 1em;
   width: 1em;
@@ -195,7 +215,7 @@ button:active {
 .accordion input:checked + label:after {
   content: '-';
   /* adjsut line-height to vertically center icon */
-  line-height: 1em; 
+  line-height: .8em; 
 }
 .accordion .accordion__content {
   overflow: hidden;
@@ -241,6 +261,9 @@ input[name='panel']:checked ~ .accordion__content {
 }
 .testing {
   margin: 0 auto;
+}
+.textOverImage a {
+  float: right;
 }
 .textOverImage{
     width:100%;
@@ -318,9 +341,67 @@ input[name='panel']:checked ~ .accordion__content {
     height: 150px;
     width: 100%;
   }
+  .infoFisma {
+    background: url(../images/thesis-fisma.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 225px;
+    width: 100%
+  }
+  .infoNewYork {
+    background: url(../images/thesis-now-and-then.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 225px;
+    width: 100%
+  }
   .tabletMobile {
     display: none;
   }
+
+/* Thesis section */
+#thesis.container {
+  flex-direction: column;
+}
+#thesis.subContainer {
+  padding: 24px;
+}
+#thesis .flex {
+  flex-direction: column;
+  max-width: 60%;
+}
+#thesis p, #thesis blockquote {
+  padding: 0 0 16px 16px;
+}
+#thesis .image {
+  /*padding: 16px 0 16px 16px; */
+}
+#thesis img {
+  width: 100%;
+  height: auto;
+  padding: 16px 0 16px 16px
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+}
+.col-2 .image {
+  width: 35%;
+  height: auto;
+}
+.row {
+  display: flex;
+}
+video {
+  width:100%;
+}
+
 /* footer section */
 
 footer {
@@ -417,6 +498,12 @@ footer {
   .subContainer p, .subContainer a {
     margin: 6px 8px 8px 16px;
     padding: 8px 0;
+  }
+  .col-1 {
+    width: 100%;
+  }
+  .col-1 blockquote, .col-1 h4 {
+    display: none;
   }
   .tabletMobile p {
     width: 80%;
