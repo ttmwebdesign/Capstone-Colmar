@@ -21,6 +21,7 @@ h1 {
   line-height: 42px;
   letter-spacing: 3px;
   font-weight: 400;
+  text-align: center;
 }
 h2 {
   font-size: 26px;
@@ -136,12 +137,20 @@ nav ul li:last-child {
   position: relative;
 }
 .desktopImg__inside {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0; */
   background: rgba(254, 255, 250, .7);
   padding: 16px;
-  transform: translate(4%, -20%)
+  /* transform: translate(4%, -20%) */
+  margin: 0 auto;
+  width: 65%;
+}
+.desktopImg__inside p {
+  text-align: center;
+}
+.desktopImg_padding {
+  padding-top: 25%;
 }
 .mobileImg {
   display: none;
@@ -463,6 +472,9 @@ footer {
   .desktopImg__inside a {
     text-decoration: none;
   }
+  .desktopImg_padding {
+    padding-top: 26%;
+  }
   #banner h1 {
     font-size: 1.7rem;
     padding: 8px 0 0 16px;
@@ -499,6 +511,9 @@ footer {
     margin: 6px 8px 8px 16px;
     padding: 8px 0;
   }
+  .desktopImg_padding {
+    padding-top: 30%;
+  }
   .col-1 {
     width: 100%;
   }
@@ -532,6 +547,9 @@ footer {
   .infoMain {
     max-height: 320px;
   }
+  .desktopImg_padding {
+    padding-top: 35%;
+  }
 }
 @media only screen and (max-width: 440px) {
   .subContainer h2 {
@@ -558,6 +576,10 @@ footer {
   }
   .desktopImg__inside {
     text-align: center;
+    padding-bottom: 20px;
+  }
+  .desktopImg_padding {
+    padding-top: 50%;
   }
   button {
     margin: 12px auto 4px;
